@@ -1,4 +1,7 @@
 <div class="list-group-item">
+    <span class="pull-left">
+        <img alt="{{weatherDay.weather[0].description}}" ng-src="http://openweathermap.org/img/w/{{weatherDay.weather[0].icon}}.png" style="margin-left: -8px; margin-top: -8px;" />
+    </span>
     <h3 class="panel-title">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</h3>
     <p class="list-group-item-text">Daytime temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.day }) }}</p>
 </div>
