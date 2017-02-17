@@ -10,7 +10,7 @@ weatherApp.service('weatherService', ['$resource', function($resource) {
     this.GetWeather = function(city, days) {
         var weatherAPI = $resource("http://api.openweathermap.org/data/2.5/forecast/daily", { callback: "JSON_CALLBACK" }, { get: { method: "JSONP" }});
     
-        return weatherResult = weatherAPI.get({ q: city, cnt: days });
+        return weatherResult = weatherAPI.get({ q: city, cnt: days, APPID: "78be404979698a45378e575dc2318611" });
     };
     
 }]);
