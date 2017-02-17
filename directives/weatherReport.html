@@ -1,0 +1,4 @@
+<div class="list-group-item">
+    <h3 class="panel-title">{{ convertToDate({ dt: weatherDay.dt }) | date: dateFormat }}</h3>
+    <p class="list-group-item-text">Daytime temperature: {{ convertToStandard({ daytimeTemp: weatherDay.temp.day }) }}</p>
+</div>
